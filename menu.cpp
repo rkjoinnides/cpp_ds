@@ -1,11 +1,10 @@
 /********************************************************************* 
 ** Author: Riley Joinindes
 ** Date: 11/10/2019
-** Class: OSU 162, Project 3
+** Class: OSU 162, Lab 6
 ** Description: Implementation file for the menu class
 *********************************************************************/
 #include "menu.hpp"
-#include "inputValidator.hpp"
 
 
 using std::string;

@@ -18,7 +18,7 @@ OBJS = main.o menu.o validateInt.o DoublyLinkedList.o Node.o
 SRCS = main.cpp menu.cpp validateInt.cpp DoublyLinkedList.cpp Node.cpp
 
 #put the headers here
-HEADERS = DoublyLinkedList.hpp vlidateInt.hpp menu.hpp Node.hpp
+HEADERS = DoublyLinkedList.hpp validateInt.hpp menu.hpp Node.hpp
 
 #target: dependencies
 #	rule to build

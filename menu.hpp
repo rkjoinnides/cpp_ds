@@ -1,12 +1,11 @@
 /********************************************************************* 
 ** Author: Riley Joinindes
 ** Date: 10/27/2019
-** Class: OSU 162, Project 2
+** Class: OSU 162, Lab 6
 ** Description: Header file for the menu class
 *********************************************************************/
 #ifndef MENU_HPP
 #define MENU_HPP
-#include "inputValidator.hpp"
 
 #include <string>
 #include <string>
@@ -23,7 +22,6 @@ class Menu
         int numberOptions;
         string * options;
         string option;
-        InputValidator validator;
 
     public:
         Menu();
