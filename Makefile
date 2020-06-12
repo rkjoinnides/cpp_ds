@@ -12,13 +12,13 @@ CXXFLAGS += -g
 LDFLAGS = -lboost_date_time
 
 #can place all of your objects to build here
-OBJS = main.o menu.o validateInt.o DoublyLinkedList.o Node.o
+OBJS = main.o menu.o validateInt.o DoublyLinkedList.o Node.o HashMap.o
 
 #place all .cpp files you want to build here
-SRCS = main.cpp menu.cpp validateInt.cpp DoublyLinkedList.cpp Node.cpp
+SRCS = main.cpp menu.cpp validateInt.cpp DoublyLinkedList.cpp Node.cpp HashMap.cpp
 
 #put the headers here
-HEADERS = DoublyLinkedList.hpp validateInt.hpp menu.hpp Node.hpp
+HEADERS = DoublyLinkedList.hpp validateInt.hpp menu.hpp Node.hpp HashMap.hpp
 
 #target: dependencies
 #	rule to build
