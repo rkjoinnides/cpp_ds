@@ -13,6 +13,7 @@ class HashMap
     public:
 
         HashMap(int capacity=100);
+        int generate_hash_index(string &input_key);
         int generate_hash(string &input_key);
 
         ~HashMap();
