@@ -13,11 +13,11 @@ class HashMap
     public:
 
         HashMap(int capacity=100);
+        ~HashMap();
+
         int generate_hash_index(string &input_key);
         int generate_hash(string &input_key);
-
-        ~HashMap();
-    
+        
     private:
 
         void resize_buckets(int input_new_capacity);

@@ -35,7 +35,10 @@ class DoublyLinkedList
         void deleteFirstNode();
         void deleteLastNode();
 
-        void treverseHeadToTail();
+        bool contains(string input_key);
+        void remove(string input_key);
+
+        void traverseHeadToTail();
         void traverseTailTohead();
 
         void printHead();

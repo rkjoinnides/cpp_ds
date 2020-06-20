@@ -34,7 +34,7 @@ void HashMap::resize_buckets(int input_new_capacity)
     this->capacity *= 2;
 }
 
-int HashMap::generate_hash(string &input_key)
+int HashMap::generate_hash_index(string &input_key)
 {
     int index = this->generate_hash(input_key);
     return index;
@@ -49,7 +49,7 @@ int HashMap::generate_hash(string &input_key)
     }
     return hash;
 }
-int HashMap::generate_hash
+
 HashMap::~HashMap()
 {
     delete [] buckets;

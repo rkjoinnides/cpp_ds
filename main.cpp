@@ -5,9 +5,14 @@
 
 int main()
 {
-    HashMap hm(100);
-    string r = "riley";
-    int result = hm.generate_hash(r);
-    cout<<result<<endl;
-    return 0;
+    DoublyLinkedList dll;
+    // for(int i=0; i<14; i++)
+    // {
+    //     dll.addToHead(to_string(i), i);
+    // }
+    dll.addToHead("12", 12);
+    dll.traverseHeadToTail();
+    cout<<dll.contains("12")<<endl;
+    dll.remove("12");
+    dll.traverseHeadToTail();
 }
