@@ -1,9 +1,3 @@
-/********************************************************************* 
-** Author: Riley Joinindes
-** Date: 11/10/2019
-** Class: OSU 162, Lab 6
-** Description: Driver function for the lab
-*********************************************************************/
 #include "DoublyLinkedList.hpp"
 #include "menu.hpp"
 #include "validateInt.hpp"

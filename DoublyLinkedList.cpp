@@ -98,7 +98,7 @@ void DoublyLinkedList::addToTail(string inputKey, int inputValue)
 **Description: Method for walking down the list from head to tail and
 print values along the way.
 *********************************************************************/
-void DoublyLinkedList::treverseHeadToTail()
+void DoublyLinkedList::traverseHeadToTail()
 {
     if (head == nullptr && tail == nullptr)
     {
@@ -116,6 +116,63 @@ void DoublyLinkedList::treverseHeadToTail()
         }
         cout<<endl;
     }
+}
+
+bool DoublyLinkedList::contains(string input_key)
+{
+    bool is_present = false;
+    if (head != nullptr)
+    {
+
+        Node * tmp_ptr = head;
+
+        while(tmp_ptr != nullptr)
+        {
+            if (tmp_ptr->key == input_key)
+            {
+                is_present = true;
+                break;
+            }
+            tmp_ptr = tmp_ptr->next;
+        }
+    }
+
+    return is_present;
+}
+
+
+void DoublyLinkedList::remove(string input_key)
+{
+    if((this->head != nullptr) && (this->contains(input_key)))
+    {
+        Node * tmp_ptr = head;
+
+        // case for one element in the list
+        if (head == tail)
+        {
+            tmp_ptr = head;
+            head = nullptr;
+            tail = nullptr;
+            delete tmp_ptr;
+        }
+
+        else
+        {
+            while (tmp_ptr != nullptr)
+            {
+                if (tmp_ptr->key == input_key)
+                {  
+                    tmp_ptr->prev->next = tmp_ptr->next;
+                    tmp_ptr->next->prev = tmp_ptr->prev;
+                    delete tmp_ptr;
+                }
+                tmp_ptr = tmp_ptr->next;
+            }
+        }
+
+    }
+
+
 }
 
 /********************************************************************* 
