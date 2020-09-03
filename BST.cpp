@@ -2,19 +2,36 @@
 
 void BST::add(int inputValue)
 {
+
+    shared_ptr<BSTNode>newNode;
+    newNode = shared_ptr<BSTNode>(new BSTNode(inputValue));
     // empty tree case
     if(this->root == nullptr)
     {
-        this->root = std::shared_ptr<BSTNode>(new BSTNode(inputValue));
+        this->root = newNode;
     }
 
     else
     {
-        shared_ptr<BSTNode> parent = findLast(inputValue);
-        parent->addChild(inputValue);
+        this->addChild(findLast(inputValue), newNode);
     }
 }
- 
+
+void BST::addChild(shared_ptr<BSTNode> parent, shared_ptr<BSTNode> child)
+{
+    if(parent->getVal() > child->getVal())
+    {
+        parent->setLeft(child);
+    }
+    else if (parent->getVal() < child->getVal())
+    {
+        parent->setRight(child);
+    }
+    else
+    {
+        parent->setRight(child);
+    }
+} 
 
 shared_ptr<BSTNode> BST::findLast(int inputValue)
 {
@@ -44,6 +61,13 @@ shared_ptr<BSTNode> BST::findLast(int inputValue)
     return prev;
 
 }
+
+
+vector<shared_ptr<BSTNode>> BST::inOrderTraversal(shared_ptr<BSTNode> current_node, vector<shared_ptr<BSTNode>>)
+{
+
+}
+
 
 BST::BST()
 {

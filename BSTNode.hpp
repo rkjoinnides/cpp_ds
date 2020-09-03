@@ -2,8 +2,10 @@
 #define BSTNODE_HPP
 
 #include <memory>
+#include <vector>
 
 using std::shared_ptr;
+using std::vector;
 
 class BSTNode
 {
