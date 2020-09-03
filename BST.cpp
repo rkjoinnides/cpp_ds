@@ -7,19 +7,19 @@ void BST::add(int inputValue)
     {
         this->root = std::shared_ptr<BSTNode>(new BSTNode(inputValue));
     }
-    
+
     else
     {
-        BSTNode * parent = findLast(inputValue);
+        shared_ptr<BSTNode> parent = findLast(inputValue);
         parent->addChild(inputValue);
     }
 }
  
 
-BSTNode * BST::findLast(int inputValue)
+shared_ptr<BSTNode> BST::findLast(int inputValue)
 {
-    BSTNode * tmp = this->root;
-    BSTNode * prev = nullptr;
+    shared_ptr<BSTNode> tmp = this->root;
+    shared_ptr<BSTNode> prev = nullptr;
 
     while (tmp != nullptr)
     {
