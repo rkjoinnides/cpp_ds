@@ -7,7 +7,7 @@ class BST
 {
     private:
         BSTNode * findLast(int inputValue);
-        BSTNode * root;
+        shared_ptr<BSTNode> root;
 
     public:
         BST();

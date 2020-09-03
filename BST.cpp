@@ -5,9 +5,9 @@ void BST::add(int inputValue)
     // empty tree case
     if(this->root == nullptr)
     {
-        
-        this->root = new  BSTNode(inputValue);
+        this->root = std::shared_ptr<BSTNode>(new BSTNode(inputValue));
     }
+    
     else
     {
         BSTNode * parent = findLast(inputValue);
@@ -42,6 +42,7 @@ BSTNode * BST::findLast(int inputValue)
         }
     }
     return prev;
+
 }
 
 BST::BST()

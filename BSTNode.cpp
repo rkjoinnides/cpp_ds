@@ -1,6 +1,6 @@
 #include "BSTNode.hpp"
 
-BSTNode::BSTNode(int inputValue, BSTNode * inputLeft, BSTNode * inputRight, BSTNode * inputParent)
+BSTNode::BSTNode(int inputValue, shared_ptr<BSTNode> inputLeft, shared_ptr<BSTNode> inputRight, shared_ptr<BSTNode> inputParent)
 {
     this->left = inputLeft;
     this->right = inputRight;
@@ -16,7 +16,7 @@ BSTNode::BSTNode(int inputValue)
     this->value = inputValue;
 }
 
-BSTNode::BSTNode(int inputValue, BSTNode * inputParent)
+BSTNode::BSTNode(int inputValue, shared_ptr<BSTNode> inputParent)
 {
     this->left = nullptr;
     this->right = nullptr;
@@ -24,7 +24,7 @@ BSTNode::BSTNode(int inputValue, BSTNode * inputParent)
     this->value = inputValue;
 }
 
-BSTNode::BSTNode(int inputValue, BSTNode * inputParent, BSTNode * inputChild, bool isLeft)
+BSTNode::BSTNode(int inputValue, shared_ptr<BSTNode> inputParent, shared_ptr<BSTNode> inputChild, bool isLeft)
 {
     if(isLeft)
     {
@@ -46,17 +46,17 @@ void BSTNode::addChild(int inputValue)
     
 }
 
-BSTNode * BSTNode::getLeft()
+shared_ptr<BSTNode> BSTNode::getLeft()
 {
     return this->left;
 }
 
-BSTNode * BSTNode::getRight()
+shared_ptr<BSTNode> BSTNode::getRight()
 {
     return this->right;
 }
 
-BSTNode * BSTNode::getParent()
+shared_ptr<BSTNode> BSTNode::getParent()
 {
     return this->parent;
 }
@@ -66,17 +66,17 @@ int BSTNode::getVal()
     return this->value;
 }
 
-void BSTNode::setLeft(BSTNode * inputLeft)
+void BSTNode::setLeft(shared_ptr<BSTNode> inputLeft)
 {
     this->left = inputLeft;
 }
 
-void BSTNode::setRight(BSTNode * inputRight)
+void BSTNode::setRight(shared_ptr<BSTNode> inputRight)
 {
     this->right = inputRight;
 }
 
-void BSTNode::setParent(BSTNode * inputParent)
+void BSTNode::setParent(shared_ptr<BSTNode> inputParent)
 {
     this->parent = inputParent;
 }
